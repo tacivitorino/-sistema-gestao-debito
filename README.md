@@ -270,6 +270,11 @@ Essas inconsistências são registradas automaticamente no relatório do Playwri
 
 Durante a automação, foram identificadas algumas inconsistências na aplicação. Para manter a rastreabilidade dos testes e evidenciar o comportamento encontrado, alguns cenários foram separados entre o comportamento atual da aplicação e o comportamento esperado pelo requisito.
 
+
+## Observações sobre cenários com inconsistências encontradas
+
+Durante a automação, foram identificadas algumas inconsistências na aplicação. Para manter a rastreabilidade dos testes e evidenciar o comportamento encontrado, alguns cenários foram separados entre o comportamento atual da aplicação e o comportamento esperado pelo requisito.
+
 ### Observação sobre o cenário SD-19 - Botão Cancelar
 
 Durante a automação do cenário **SD-19 - Botão Cancelar**, foi identificada uma inconsistência no texto do botão na tela de cadastro.
@@ -278,9 +283,13 @@ O requisito esperado para o botão é:
 
 ```text
 Cancelar
+```
 
-O botão está sendo exibido
+Porém, na aplicação, o botão está sendo exibido como:
+
+```text
 Canclear
+```
 
 Por esse motivo, foram criados dois cenários relacionados ao fluxo de cancelamento:
 
@@ -291,26 +300,3 @@ Por esse motivo, foram criados dois cenários relacionados ao fluxo de cancelame
   Cenário criado considerando o comportamento esperado do sistema, validando que o botão deveria estar escrito como `Cancelar`.
 
 Essa separação foi feita para documentar a falha de interface encontrada e, ao mesmo tempo, manter a rastreabilidade do comportamento esperado para o fluxo de cancelamento do cadastro.
-
-## Padrão de desenvolvimento
-
-O projeto foi desenvolvido seguindo boas práticas de automação de testes:
-
-- Organização dos testes por funcionalidade.
-- Uso de Page Object Model.
-- Centralização de massas de dados em fixtures.
-- Nomes de testes descritivos.
-- Métodos reutilizáveis para reduzir duplicidade.
-- Mensagens de validação claras para facilitar a análise de falhas.
-- Separação entre ações da página e asserções dos cenários.
-
-
-## Observações
-
-A automação foi estruturada para facilitar a manutenção e a leitura dos cenários. Os testes foram separados por tela e por responsabilidade, permitindo identificar rapidamente em qual fluxo ocorreu uma falha.
-
-O relatório gerado pelo Playwright deve ser utilizado como evidência da execução dos testes e das inconsistências encontradas.
-
-## Autor
-
-Projeto desenvolvido por **Taciana Vitorino** para desafio técnico de automação de testes.
