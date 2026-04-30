@@ -300,3 +300,13 @@ Por esse motivo, foram criados dois cenários relacionados ao fluxo de cancelame
   Cenário criado considerando o comportamento esperado do sistema, validando que o botão deveria estar escrito como `Cancelar`.
 
 Essa separação foi feita para documentar a falha de interface encontrada e, ao mesmo tempo, manter a rastreabilidade do comportamento esperado para o fluxo de cancelamento do cadastro.
+
+## Observações
+
+A automação foi estruturada para facilitar a manutenção e a leitura dos cenários. Os testes foram separados por tela e por responsabilidade, permitindo identificar rapidamente em qual fluxo ocorreu uma falha.
+
+O relatório gerado pelo Playwright deve ser utilizado como evidência da execução dos testes e das inconsistências encontradas.
+
+## Autor
+
+Projeto desenvolvido por **Taciana Vitorino** para desafio técnico de automação de testes.
